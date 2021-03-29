@@ -1,8 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import FirstPage from './FirstPage';
+import SecondPage from './SecondPage';
+import AppContext from './AppContext';
+import ThirdPage from './ThirdPage';
 
-export default function App() {
+
+const App = () => {
+  const[page, setPage] = useState(1);
+  const[selectedCourse, setSelectedCourse] = useState(null);
+
+  useEffect(() => selectedCourse ? setPage(2): setPage(1), [selectedCourse]);
+
   return (
-      <FirstPage />
+    <AppContext.Provider value={{pages:[page, setPage], courses: [selectedCourse, setSelectedCourse]}}>
+      {page === 1 && <FirstPage />} 
+      {page === 2 && <SecondPage />}
+      {page === 3 && <ThirdPage />}
+    </AppContext.Provider>
   );
 };
+
+export default App;
+
