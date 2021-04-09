@@ -4,12 +4,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import {Typography, CardMedia} from '@material-ui/core';
-import AppContext from './AppContext'
+import AppContext from '../AppContext'
 
 
 const CourseCard = (props) => {
 
-  const {pages, courses} = useContext(AppContext);
+  const {courses} = useContext(AppContext);
   const [selectedCourse, setSelectedCourse] = courses;
   const{id, name, description} = props;
 
@@ -17,7 +17,7 @@ const CourseCard = (props) => {
       <Card>
         <CardMedia
           image="logo192.png"
-          style={{minHeight: 200, objectFit: 'fill'}}
+          style={{minHeight: '200px', maxWidth: '200px', margin: 'auto'}}
           title="Card image"
         />
         <CardContent>

@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +28,7 @@ const QuizCheckboxGroup = (props) => {
     'Yes': false,
     'No': false,
   });
-  const {id, question, answers} = props;
+  const {answers} = props;
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -40,7 +39,7 @@ const QuizCheckboxGroup = (props) => {
   return (
     <Grid container justify="center" className={classes.root}>
       <FormControl required component="fieldset" className={classes.formControl}>
-        <FormLabel component="legend">Pick {variantCount}</FormLabel>
+        <Typography variant="h6">Pick {variantCount}</Typography>
         <FormGroup>
           {answers.map(answer => (answer.correct && showCorrect) ? (
               <FormControlLabel

@@ -1,8 +1,8 @@
 import { Grid, Typography, Button } from '@material-ui/core';
 import React, {useContext} from 'react';
-import AppContext from './AppContext'
+import AppContext from '../AppContext'
 import Header from './Header';
-import courseData from './constants';
+import courseData from '../constants';
 import Quiz from './Quiz';
 
 const SecondPage = () => {

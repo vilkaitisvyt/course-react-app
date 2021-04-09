@@ -1,7 +1,7 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
 import CourseCard from './CourseCard';
-import courseData from './constants';
+import courseData from '../constants';
 
 const FirstPageContent = () => {
 

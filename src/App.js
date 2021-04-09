@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import FirstPage from './FirstPage';
-import SecondPage from './SecondPage';
+import FirstPage from './components/FirstPage';
+import SecondPage from './components/SecondPage';
 import AppContext from './AppContext';
-import ThirdPage from './ThirdPage';
+import ThirdPage from './components/ThirdPage';
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <AppContext.Provider value={{pages:[page, setPage], courses: [selectedCourse, setSelectedCourse]}}>
-      {page === 1 && <FirstPage />} 
+      {page === 1 && <FirstPage />}
       {page === 2 && <SecondPage />}
       {page === 3 && <ThirdPage />}
     </AppContext.Provider>

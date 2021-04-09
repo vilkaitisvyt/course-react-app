@@ -16,7 +16,7 @@ const ThirdPage = () => {
                 <Grid item xs={false} sm={2}/>
           </Grid>
           <Grid item container style={{ padding: 20 }} justify="center" alignItems="center" xs={12}>
-                <Typography style={{ paddingBottom: 40, paddingTop: 40 }} variant="h3" >Doge approves. And who am i to disagree.</Typography>
+                <Typography style={{ paddingBottom: 40, paddingTop: 40 }} variant="h3" >Doge approves, and who are we to disagree.</Typography>
           </Grid>
       </Grid>
   );  

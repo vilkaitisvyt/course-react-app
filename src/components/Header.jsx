@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import AppContext from './AppContext';
+import AppContext from '../AppContext';
 import { Grid } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
