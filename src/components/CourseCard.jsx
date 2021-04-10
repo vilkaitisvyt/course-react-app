@@ -4,13 +4,14 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import {Typography, CardMedia} from '@material-ui/core';
-import AppContext from '../AppContext'
+import { AppContext } from '../AppContext'
+import { useHistory } from 'react-router-dom';
 
 
 const CourseCard = (props) => {
 
-  const {courses} = useContext(AppContext);
-  const [selectedCourse, setSelectedCourse] = courses;
+  const history = useHistory();
+  const [selectedCourse, setSelectedCourse] = useContext(AppContext);
   const{id, name, description} = props;
 
     return (
@@ -29,7 +30,12 @@ const CourseCard = (props) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary" onClick={() => setSelectedCourse(id)}>Select</Button>
+          <Button size="small" color="primary" onClick={() => {
+
+            setSelectedCourse(id);
+            history.push("/course");
+            
+          }}>Select</Button>
         </CardActions>
       </Card>
     )    

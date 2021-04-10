@@ -5,7 +5,6 @@ import { Grid, Typography } from '@material-ui/core';
 const Quiz = (props) => {
 
     const quiz = props.quiz;
-    console.log(quiz);
 
     const getQuestion = (questionObj) => {
         return (

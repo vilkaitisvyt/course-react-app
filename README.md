@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Installs missing node modules. After it's done you can proceed with commands below.\
+Installs missing node modules. After it's done you can proceed with commands below.
 
 ### `npm start`
 

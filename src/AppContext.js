@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
 
-const AppContext = React.createContext();
+export const AppContext = createContext();
 
-export default AppContext;
+export const AppContextProvider = props => {
+
+    const [selectedCourse, setSelectedCourse] = useState(1);
+  
+    return (
+      <AppContext.Provider value={[selectedCourse, setSelectedCourse]}>
+        {props.children}
+      </AppContext.Provider>
+    );
+  };
