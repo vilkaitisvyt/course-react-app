@@ -3,11 +3,11 @@ import { Grid, Typography } from '@material-ui/core';
 
 const ThirdPage = () => {
   return(
-      <Grid container direction="column">
+      <Grid container direction="column" style={{color: "white", background: "rgb(29, 30, 37)"}}>
           <Grid item container>
                 <Grid item xs={false} sm={2}/>
                 <Grid item container style={{ marginTop: 64, padding: 20 }} xs={12} sm={8} justify="center" alignItems="center">
-                  <img src="Congratulations.png" style={{borderRadius: '50%'}} alt="congratulations img"/>
+                  <img src="Congratulations.png" style={{border: "5px solid white", borderRadius: '10%'}} alt="congratulations img"/>
                 </Grid>
                 <Grid item xs={false} sm={2}/>
           </Grid>

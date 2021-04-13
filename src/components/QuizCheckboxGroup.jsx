@@ -43,22 +43,20 @@ const QuizCheckboxGroup = (props) => {
         <FormGroup>
           {answers.map(answer => (answer.correct && showCorrect) ? (
               <FormControlLabel
-            control={<Checkbox checked={state[answer.variant]} onChange={handleChange} name={answer.variant} />}
+            control={<Checkbox checked={state[answer.variant]} onChange={handleChange} name={answer.variant} style={{color: 'green'}} />}
             label={answer.variant}
             key={answer.variant}
-            style={{border: '1px solid green', margin: 1}}
           />) : (
             <FormControlLabel
             control={<Checkbox checked={state[answer.variant]} onChange={handleChange} name={answer.variant} />}
             label={answer.variant}
             key={answer.variant}
-            style={{margin: 2}}
           />
           ))
           }        
         </FormGroup>
-        <Button variant="contained" style={{marginTop: 20}} onClick={() => setShowCorrect(!showCorrect)} color="primary">
-            Show correct
+        <Button variant="contained" style={{marginTop: 20, width: "115px"}} onClick={() => setShowCorrect(!showCorrect)} color="secondary">
+            Reveal
         </Button>
       </FormControl>
     </Grid>

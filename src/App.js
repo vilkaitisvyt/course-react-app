@@ -5,12 +5,14 @@ import { AppContextProvider } from './AppContext';
 import ThirdPage from './components/ThirdPage';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
+import ScrollToTop from './components/ScrollToTop';
 
 
 const App = () => {  
 
   return (
-    <AppContextProvider >
+    <AppContextProvider>
+      <ScrollToTop />
       <Header />
       <Switch>
         <Route exact path="/">
